@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
 
 import 'Component/BottomNavigaton.dart';
 import 'Component/Categories.dart';
@@ -11,7 +9,7 @@ import 'Component/Upper_Container.dart';
 import 'Component/greatest.dart';
 
 void main() {
-  runApp(homeScreen());
+  runApp(const homeScreen());
 }
 
 class homeScreen extends StatefulWidget {
@@ -27,7 +25,7 @@ class _homeScreenState extends State<homeScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xffF6F7F9),
+        backgroundColor: const Color(0xffF6F7F9),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -71,7 +69,7 @@ class _homeScreenState extends State<homeScreen> {
                 horizontal: 22,
               ),
               child: Container(
-                margin: EdgeInsets.only(top: 16),
+                margin: const EdgeInsets.only(top: 16),
                 height: 51,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -114,6 +112,6 @@ List l1 = [
   {'image' : p3 , 'name' : 'Nike Air Shokes', 'nick' : "Men's warm Shokes",'price' : '₹190'} ,
 
 ];
-AssetImage p1 = AssetImage('assets/homeImage/jacket.jpg');
-AssetImage p2 = AssetImage('assets/homeImage/shose3.jpeg');
-AssetImage p3 = AssetImage('assets/homeImage/shoks.png');
+AssetImage p1 = const AssetImage('assets/homeImage/jacket.jpg');
+AssetImage p2 = const AssetImage('assets/homeImage/shose3.jpeg');
+AssetImage p3 = const AssetImage('assets/homeImage/shoks.png');

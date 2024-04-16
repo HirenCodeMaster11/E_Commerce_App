@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 
 import 'BottomAppBar.dart';
+import 'Extra.dart';
 
 void main() {
-  runApp(cartScreen());
+  runApp(const cartScreen());
 }
 
 class cartScreen extends StatefulWidget {
@@ -20,14 +23,18 @@ class _cartScreenState extends State<cartScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xffF6F7F9),
+        backgroundColor: const Color(0xffF6F7F9),
         appBar: AppBar(
           centerTitle: true,
-          title: Text('My Bag',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 25),),
+          title: const Text(
+            'My Bag',
+            style: TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),
+          ),
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 22,right: 22),
+            padding: const EdgeInsets.only(left: 22, right: 22),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -37,44 +44,80 @@ class _cartScreenState extends State<cartScreen> {
                       child: Container(
                         height: 178,
                         width: 367,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xffF1F1F1),
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(18),bottomLeft: Radius.circular(18)),
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(18),
+                              bottomLeft: Radius.circular(18)),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(left: 12),
+                          padding: const EdgeInsets.only(left: 12),
                           child: Column(
                             children: [
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(top: 8),
                                 child: Row(
                                   children: [
-                                    Text('Nike Air MAx 90',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                                    Text(
+                                      'Nike Air Max 90',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 9),
-                                      child: Text('✩4.8',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                                      child: Text(
+                                        '✩4.8',
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold),
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-                              Row(
+                              const Row(
                                 children: [
-                                  Text("Men's Stylish Nick",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.grey),),
+                                  Text(
+                                    "Men's Stylish Nick",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey),
+                                  ),
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 children: [
-                                  Text("₹1100",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black),),
+                                  Text(
+                                    "₹1100",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 children: [
-                                  Text("LOW IN STOCK",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.black),),
+                                  Text(
+                                    "LOW IN STOCK",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
                                 ],
                               ),
-                              Row(
+                              const Row(
                                 children: [
-                                  Text("QTY",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black),),
+                                  Text(
+                                    "QTY",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
                                 ],
                               ),
                               Row(
@@ -87,35 +130,34 @@ class _cartScreenState extends State<cartScreen> {
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
                                       children: [
                                         InkWell(
                                           onTap: () {
                                             setState(() {
-                                              if(count>=1)
-                                                {
-                                                  count--;
-                                                }
-                                              else
-                                                {
-                                                  count=1;
-                                                }
+                                              if (count > 1) {
+                                                count--;
+                                              }
                                             });
                                           },
                                           child: Container(
                                             height: 28,
                                             width: 28,
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              shape: BoxShape.circle
-                                            ),
-                                            child: Icon(Icons.remove,color: Colors.black),
+                                            decoration: const BoxDecoration(
+                                                color: Colors.white,
+                                                shape: BoxShape.circle),
+                                            child: const Icon(Icons.remove,
+                                                color: Colors.black),
                                           ),
                                         ),
-                                        Text('$count',style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                        ),),
+                                        Text(
+                                          '$count',
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          ),
+                                        ),
                                         InkWell(
                                           onTap: () {
                                             setState(() {
@@ -123,16 +165,41 @@ class _cartScreenState extends State<cartScreen> {
                                             });
                                           },
                                           child: Container(
-                                              height: 28,
-                                              width: 28,
-                                              decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  shape: BoxShape.circle
-                                              ),
-                                            child: Icon(Icons.add,color: Colors.black),
-                                            ),
+                                            height: 28,
+                                            width: 28,
+                                            decoration: const BoxDecoration(
+                                                color: Colors.white,
+                                                shape: BoxShape.circle),
+                                            child: const Icon(Icons.add,
+                                                color: Colors.black),
+                                          ),
                                         ),
                                       ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Container(
+                                      height: 46,
+                                      width: 46,
+                                      decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            height: 32,
+                                            width: 32,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Icon(Icons.delete),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -143,11 +210,13 @@ class _cartScreenState extends State<cartScreen> {
                       ),
                     ),
                     Container(
-                      height: 178,
+                      height: 174,
                       width: 160,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(topRight: Radius.circular(18),bottomRight: Radius.circular(18)),
-                        image: const DecorationImage(
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(18),
+                            bottomRight: Radius.circular(18)),
+                        image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage('assets/homeImage/shose3.jpeg'),
                         ),
@@ -164,19 +233,36 @@ class _cartScreenState extends State<cartScreen> {
                         height: 48,
                         width: 170,
                         decoration: BoxDecoration(
-                          color: Color(0xff135B60),
+                          color: const Color(0xff135B60),
                           borderRadius: BorderRadius.circular(26),
                         ),
                         alignment: Alignment.center,
-                        child: Text('Checkout',style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 24,
-                        ),),
+                        child: const Text(
+                          'Checkout',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 24,
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12),
+                      child: Text('A Little Somthing Extra?',style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                    ),
+                  ],
+                ),
+                Extra(),
               ],
             ),
           ),
@@ -186,4 +272,5 @@ class _cartScreenState extends State<cartScreen> {
     );
   }
 }
+
 int count = 1;

@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 import 'ColorDetails.dart';
 
 void main() {
-  runApp(homeScreen());
+  runApp(const detailScreen());
 }
 
-class homeScreen extends StatefulWidget {
-  const homeScreen({super.key});
+class detailScreen extends StatefulWidget {
+  const detailScreen({super.key});
 
   @override
-  State<homeScreen> createState() => _homeScreenState();
+  State<detailScreen> createState() => _detailScreenState();
 }
 
-class _homeScreenState extends State<homeScreen> {
+class _detailScreenState extends State<detailScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xffF6F7F9),
+        backgroundColor: const Color(0xffF6F7F9),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 22),
@@ -48,7 +48,7 @@ class _homeScreenState extends State<homeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             "Nike Air Max 90",
@@ -59,7 +59,7 @@ class _homeScreenState extends State<homeScreen> {
                           ),
                         ],
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
@@ -72,11 +72,11 @@ class _homeScreenState extends State<homeScreen> {
                           ),
                         ],
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(top: 14),
+                            padding: EdgeInsets.only(top: 14),
                             child: Text(
                               "Select Color",
                               style: TextStyle(
@@ -88,17 +88,17 @@ class _homeScreenState extends State<homeScreen> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children:
                           List.generate(l1.length, (index) => ColorDetails(index: index,images: l1[index]['image']))
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(top: 14),
+                            padding: EdgeInsets.only(top: 14),
                             child: Text(
                               "Select Size",
                               style: TextStyle(
@@ -115,11 +115,11 @@ class _homeScreenState extends State<homeScreen> {
                           children:
                           List.generate(4, (index) => sizeBox(index: index+40))
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(top: 14),
+                            padding: EdgeInsets.only(top: 14),
                             child: Text(
                               "Description",
                               style: TextStyle(
@@ -143,7 +143,7 @@ class _homeScreenState extends State<homeScreen> {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(5),
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Nothing as fly, nothing as comfortable, nothing as proven.The Nike Air Max 90 stays true to its OG running roots with the iconic Waffle sole, stitched overlays and classic TPU details.Classic colours celebrate your fresh look while Max Air cushioning adds comfort to the journey.",
                                 style: TextStyle(
                                   fontSize: 16,
@@ -169,11 +169,11 @@ class _homeScreenState extends State<homeScreen> {
                 height: 66,
                 width: 379,
                 decoration: BoxDecoration(
-                  color: Color(0xff135B60),
+                  color: const Color(0xff135B60),
                   borderRadius: BorderRadius.circular(28),
                 ),
                 alignment: Alignment.center,
-                child: Text('🛍️ ADD TO BAG',style: TextStyle(
+                child: const Text('🛍️ ADD TO BAG',style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 21,
                     color: Colors.white
@@ -191,6 +191,6 @@ List l1 = [
   {'image' : c2} ,
   {'image' : c3} ,
 ];
-AssetImage c1 = AssetImage('assets/homeImage/shose3.jpeg');
-AssetImage c2 = AssetImage('assets/homeImage/shose4.jpeg');
-AssetImage c3 = AssetImage('assets/homeImage/shose2.jpeg');
+AssetImage c1 = const AssetImage('assets/homeImage/shose3.jpeg');
+AssetImage c2 = const AssetImage('assets/homeImage/shose4.jpeg');
+AssetImage c3 = const AssetImage('assets/homeImage/shose2.jpeg');

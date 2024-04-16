@@ -71,6 +71,12 @@ flutter:
     - assets/homeImage/shose2.jpeg
     - assets/homeImage/shose3.jpeg
     - assets/homeImage/shose4.jpeg
+    - assets/homeImage/images.jpeg
+    - assets/homeImage/images (1).jpeg
+    - assets/homeImage/go.png
+    - assets/homeImage/mas.png
+    - assets/homeImage/paypal.png
+    - assets/homeImage/paytm.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
