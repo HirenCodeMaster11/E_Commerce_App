@@ -4,8 +4,8 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
 import '../home_screen/home.dart';
-import 'BottomAppBar.dart';
-import 'Extra.dart';
+import 'Component/Extra.dart';
+import 'Component/Other.dart';
 
 void main() {
   runApp(const cartScreen());
@@ -66,8 +66,14 @@ class _cartScreenState extends State<cartScreen> {
             InkWell(
               onTap: () {
                 setState(() {
-                  cart.add(l1[selectIndex]);
-                });
+                  for(int i=0; i<cart.length; i++)
+                    {
+                      subTotal+=(int.parse(cart[i]['price']) * cart[i]['qut']).toInt();
+                      shipping = 100;
+                      total = subTotal - shipping;
+                    }
+                }
+                );
                 Navigator.of(context).pushNamed('/check');
               },
               child: Container(
@@ -146,7 +152,7 @@ class _cartScreenState extends State<cartScreen> {
                     Row(
                       children: [
                         Text(
-                          "${cart[index]['price']}",
+                          "₹ ${cart[index]['price']}",
                           style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -154,28 +160,8 @@ class _cartScreenState extends State<cartScreen> {
                         ),
                       ],
                     ),
-                    const Row(
-                      children: [
-                        Text(
-                          "LOW IN STOCK",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
-                    const Row(
-                      children: [
-                        Text(
-                          "QTY",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
+                    Other(),
+                    Other2(),
                     Row(
                       children: [
                         Container(
@@ -294,3 +280,7 @@ class _cartScreenState extends State<cartScreen> {
 int count = 1;
 
 List cart = [];
+
+int subTotal =0;
+int shipping = 0;
+int total = 0;

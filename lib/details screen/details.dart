@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/details%20screen/temp.dart';
+import 'package:e_commerce_app/details%20screen/Component/temp.dart';
 import 'package:e_commerce_app/home_screen/home.dart';
 import 'package:flutter/material.dart';
 

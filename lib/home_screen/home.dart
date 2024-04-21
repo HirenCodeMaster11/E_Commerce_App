@@ -128,9 +128,9 @@ AssetImage p2 =  AssetImage('assets/homeImage/shose3.jpeg');
 AssetImage p3 =  AssetImage('assets/homeImage/shoks.png');
 
 List l1 = [
-  {'image' : p1 , 'name' : 'Nike Jacket', 'nick' : "Men's warm jacket",'price' : '₹1100','description' : 'The Nike Sportswear Windrunner Jacket updates our first running windbreaker with lightweight fabric made from recycled materials. Design details pulled from the original version provide a heritage Nike look. This product is made from 100% recycled polyester fibres.','qut' : 1} ,
-  {'image' : p2 , 'name' : 'Nike Air 90', 'nick' : "Men's warm shoes",'price' : '₹1190','description' : 'Nothing as fly, nothing as comfortable, nothing as proven.The Nike Air Max 90 stays true to its OG running roots with the iconic Waffle sole, stitched overlays and classic TPU details.Classic colours celebrate your fresh look while Max Air cushioning adds comfort to the journey.','qut' : 1} ,
-  {'image' : p3 , 'name' : 'Nike Shokes', 'nick' : "Men's warm Shokes",'price' : '₹190','description' : 'The Nike Racing Socks deliver performance comfort so you can stay focused on the finish line. Taking a step forward from its origins at Breaking2, these socks deliver a snug fit and slip resistance to help keep you secure on your run.','qut' : 1} ,
+  {'image' : p1 , 'name' : 'Nike Jacket', 'nick' : "Men's warm jacket",'price' : '1100','description' : 'The Nike Sportswear Windrunner Jacket updates our first running windbreaker with lightweight fabric made from recycled materials. Design details pulled from the original version provide a heritage Nike look. This product is made from 100% recycled polyester fibres.','qut' : 1} ,
+  {'image' : p2 , 'name' : 'Nike Air 90', 'nick' : "Men's warm shoes",'price' : '1190','description' : 'Nothing as fly, nothing as comfortable, nothing as proven.The Nike Air Max 90 stays true to its OG running roots with the iconic Waffle sole, stitched overlays and classic TPU details.Classic colours celebrate your fresh look while Max Air cushioning adds comfort to the journey.','qut' : 1} ,
+  {'image' : p3 , 'name' : 'Nike Shokes', 'nick' : "Men's warm Shokes",'price' : '190','description' : 'The Nike Racing Socks deliver performance comfort so you can stay focused on the finish line. Taking a step forward from its origins at Breaking2, these socks deliver a snug fit and slip resistance to help keep you secure on your run.','qut' : 1} ,
 
 ];
 int selectIndex = 0;

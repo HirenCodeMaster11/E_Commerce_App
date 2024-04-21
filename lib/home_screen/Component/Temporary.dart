@@ -42,7 +42,7 @@ Container Temporary({required AssetImage images,required var name, required var 
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
                     height: 0.7),),
-              Text(l1[index]['price'],
+              Text('₹ ${l1[index]['price']}',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

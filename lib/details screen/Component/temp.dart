@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/details%20screen/sizeBox.dart';
+import 'package:e_commerce_app/details%20screen/Component/sizeBox.dart';
 import 'package:e_commerce_app/home_screen/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 
 import 'ColorDetails.dart';
-import 'details.dart';
+import '../details.dart';
 
 Column detail({required var index}) {
   return Column(
