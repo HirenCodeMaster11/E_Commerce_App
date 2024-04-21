@@ -30,3 +30,20 @@ samples, guidance on mobile development, and a full API reference.
 </div>
 
 <h1 align="left"></h1>
+
+
+<h3 align="center">1. Home Screen </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="https://github.com/HirenCodeMaster11/E_Commerce_App/assets/148859956/efa17fae-eb82-4e92-b4d1-9ff3c07115b1" />
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/blob/master/lib/home_screen/home.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/tree/master/lib/home_screen/Component">-> 📂 Go To Component 📂 <-</a>
+</div>
+
+<h1 align="left"></h1>
