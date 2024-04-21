@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'BottomNavigation.dart';
+import 'card.dart';
 
 void main()
 {
@@ -17,10 +18,10 @@ class checkoutScreen extends StatefulWidget {
 class _checkoutScreenState extends State<checkoutScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
+      backgroundColor: Color(0xffF6F7F9),
         appBar: AppBar(
+          backgroundColor:Color(0xffF6F7F9),
           centerTitle: true,
           title: const Text(
             'Checkout',
@@ -29,113 +30,126 @@ class _checkoutScreenState extends State<checkoutScreen> {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(left: 16),
+          padding: const EdgeInsets.only(left: 16,right: 16),
           child: Column(
             children: [
+                card(),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 50,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                          image: AssetImage('assets/homeImage/mas.png'),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12),
-                      child: Text('Mastercard',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w500,
-                      ),),
-                    )
+                    Text('Shiping Information',style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),),
+                    Icon(Icons.border_color,size: 20,),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                          image: AssetImage('assets/homeImage/paypal.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12),
-                      child: Text('Paypal',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w500,
-                      ),),
-                    )
-                  ],
+                child: Container(
+                  height: 176,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF6F7F9),
+                    border: Border(bottom: BorderSide(width: 2,color: Colors.grey),),
+                  ),
+                  child: Text.rich(TextSpan(
+                    children: [
+                      TextSpan(text: 'Padro Chill\n',style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                      TextSpan(text: 'Zizkova 5,Bystrice pod Hostynem\n',style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                      TextSpan(text: 'Bystrice pod Hostynem\n',style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                      TextSpan(text: '17584\n',style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                      TextSpan(text: 'Czech Republic\n',style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                      TextSpan(text: '51165472\n',style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      )),
+                    ],
+                  ),),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                          image: AssetImage('assets/homeImage/paytm.png'),
-                          fit: BoxFit.cover,
-                        ),
+                padding: const EdgeInsets.only(top: 16),
+                child: Container(
+                  height: 80,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF6F7F9),
+                    border: Border(bottom: BorderSide(width: 2,color: Colors.grey),),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Subtotal:',style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey,
+                          ),),
+                          Text('₹1000',style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),),
+                        ],
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12),
-                      child: Text('Paytm',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w500,
-                      ),),
-                    )
-                  ],
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Shipping:',style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.grey,
+                          ),),
+                          Text('₹100',style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 16),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 50,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                          image: AssetImage('assets/homeImage/go.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12),
-                      child: Text('Googlepay',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w500,
-                      ),),
-                    )
+                    Text('Total Cost:',style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),),
+                    Text('₹1100',style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),),
                   ],
                 ),
               ),
@@ -143,7 +157,6 @@ class _checkoutScreenState extends State<checkoutScreen> {
           ),
         ),
         bottomNavigationBar:BottomNavigation(),
-        ),
     );
   }
 }

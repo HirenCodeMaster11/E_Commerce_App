@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:e_commerce_app/home_screen/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +16,15 @@ class splaceScreen extends StatefulWidget {
 
 class _splaceScreenState extends State<splaceScreen> {
   @override
+  void initState()
+  {
+    Timer(Duration(seconds: 3),()
+    {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => homeScreen(),));
+    },);
+  }
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home : Scaffold(
+    return Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -35,7 +43,6 @@ class _splaceScreenState extends State<splaceScreen> {
             ),
           ],
         ),
-      ),
     );
   }
 }

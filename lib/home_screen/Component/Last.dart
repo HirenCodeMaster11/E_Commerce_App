@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../details screen/details.dart';
-
-Container Navigation({required AssetImage images,required var index}) {
+Container Last({required AssetImage images,required var index}) {
   return Container(
     margin: EdgeInsets.only(right: 12,top: 12),
     padding: EdgeInsets.all(10),
