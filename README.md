@@ -32,7 +32,7 @@ samples, guidance on mobile development, and a full API reference.
 <h1 align="left"></h1>
 
 
-<h3 align="center">1. Home Screen </h3>
+<h3 align="center">2. Home Screen </h3>
 
 <h1 align="left"></h1>
 
@@ -44,6 +44,66 @@ samples, guidance on mobile development, and a full API reference.
 </div>
 <div align="center">
 <a href="https://github.com/HirenCodeMaster11/E_Commerce_App/tree/master/lib/home_screen/Component">-> 📂 Go To Component 📂 <-</a>
+</div>
+
+<h1 align="left"></h1>
+
+
+<h3 align="center">3. Details Screen </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="https://github.com/HirenCodeMaster11/E_Commerce_App/assets/148859956/10bd4689-5a5c-488a-a6e2-124e35c7557c" />
+</div>
+
+
+<h3 align="center">3. Details-2 Screen </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="https://github.com/HirenCodeMaster11/E_Commerce_App/assets/148859956/e9557792-8b37-479c-8b71-f1b5799a2936" />
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/blob/master/lib/details%20screen/details.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/tree/master/lib/details%20screen/Component">-> 📂 Go To Component 📂 <-</a>
+</div>
+
+<h1 align="left"></h1>
+
+
+
+<h3 align="center">4. Cart Screen </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="" />
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/blob/master/lib/cart%20screen/CartScreen.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/tree/master/lib/cart%20screen/Component">-> 📂 Go To Component 📂 <-</a>
+</div>
+
+<h1 align="left"></h1>
+
+<h3 align="center">5. Checkout Screen </h3>
+
+<h1 align="left"></h1>
+
+<div align="center">
+  <img height="550"  src="" />
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/blob/master/lib/checkout%20screen/checkoutScreen.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+<div align="center">
+<a href="https://github.com/HirenCodeMaster11/E_Commerce_App/tree/master/lib/checkout%20screen/Component">-> 📂 Go To Component 📂 <-</a>
 </div>
 
 <h1 align="left"></h1>
