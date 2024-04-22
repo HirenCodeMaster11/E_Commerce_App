@@ -41,7 +41,24 @@ class _detailScreenState extends State<detailScreen> {
               InkWell(
                 onTap: () {
                   setState(() {
-                    cart.add(l1[selectIndex]);
+                    bool qty = false;
+                    int index =0;
+
+                    for(int i=0; i<cart.length; i++)
+                      {
+                        if(cart[i]['name'] == l1[selectIndex]['name'])
+                          {
+                            index =i;
+                            qty = true;
+                          }
+                      }
+                    if(qty)
+                      {
+                        cart[index]['qut']++;
+                      }
+                    else{
+                      cart.add(l1[selectIndex]);
+                    }
                   });
                   Navigator.of(context).pushNamed('/cart');
                 },
