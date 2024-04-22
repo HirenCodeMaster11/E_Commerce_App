@@ -19,8 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 <h3 align="center">E-Commerce App Video </h3>
 <div align="center">
- <video width="520" height="340" controls>
-  <source src="https://github.com/HirenCodeMaster11/E_Commerce_App/assets/148859956/388c7e16-01ed-4ecf-b3df-45e26bbdf97c.mp4" type="video/mp4">
+ <video src="https://github.com/HirenCodeMaster11/E_Commerce_App/assets/148859956/388c7e16-01ed-4ecf-b3df-45e26bbdf97c.mp4" type="video/mp4"> 
 </video>
 </div>
 
